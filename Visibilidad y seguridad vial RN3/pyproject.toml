@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "modelo_predictivo_rn3"
+version = "0.0.1"
+description = "Modelo de aprendizaje autom\u00e1tico para predecir condiciones de baja visibilidad y riesgo vial en la Ruta Nacional N\u00b03 utilizando datos meteorol\u00f3gicos."
+authors = [
+  { name = "lara giovanna" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+requires-python = "~=3.10.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["modelo_predictivo_rn3"]
+include = ["pyproject.toml", "modelo_predictivo_rn3/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["modelo_predictivo_rn3"]
+force-sort-within-sections = true
+
