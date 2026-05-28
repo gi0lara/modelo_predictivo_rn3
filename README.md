@@ -1,7 +1,7 @@
 Modelo Predictivo RN3
 ==============================
 
-Predicción de baja visibilidad y riesgo vial en la RN3
+Modelo de aprendizaje automático para predecir condiciones de baja visibilidad y riesgo vial en la Ruta Nacional N°3 utilizando datos meteorológicos.
 
 Project Organization
 ------------
