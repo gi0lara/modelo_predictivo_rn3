@@ -1,7 +1,13 @@
-Modelo Predictivo RN3
+#Modelo Predictivo RN3
 ==============================
 
-Modelo de aprendizaje automático para predecir condiciones de baja visibilidad y riesgo vial en la Ruta Nacional N°3 utilizando datos meteorológicos.
+## Descripción del Proyecto
+
+Este proyecto tiene como objetivo desarrollar un modelo de Aprendizaje Automático capaz de predecir condiciones de riesgo vial asociadas a la baja visibilidad en la Ruta Nacional N.º 3 de Tierra del Fuego. Utilizando datos meteorológicos históricos, se busca identificar situaciones que favorezcan la formación de niebla y otros fenómenos que dificultan la conducción, contribuyendo así a la generación de alertas tempranas para mejorar la seguridad vial.
+
+##Objetivo General
+Desarrollar un modelo de Aprendizaje Automático supervisado, utilizando la librería scikit-learn, que permita clasificar de manera temprana condiciones de riesgo vial por pérdida crítica de visibilidad en la Ruta Nacional N.º 3 a partir de variables meteorológicas locales, con el objetivo de emitir alertas tempranas sobre posibles escenarios de baja visibilidad y peligro para la circulación. 
+
 
 Project Organization
 ------------
