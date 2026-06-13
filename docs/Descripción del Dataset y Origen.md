@@ -67,6 +67,7 @@ Para el modelo, esta situación es beneficiosa porque ambas variables aportan in
 Estos valores no fueron considerados errores ni eliminados durante el proceso de limpieza, ya que corresponden a fenómenos meteorológicos reales. Además, resultan especialmente importantes para el proyecto porque pueden estar asociados a situaciones de mayor riesgo para la circulación vehicular. Los modelos seleccionados, como Árboles de Decisión y Random Forest, pueden trabajar adecuadamente con este tipo de valores extremos y utilizarlos para mejorar la identificación de escenarios críticos.
 
 
+<img width="1189" height="495" alt="image" src="https://github.com/user-attachments/assets/04b85168-87ba-485f-811a-d7bafd048f6a" />
 
 
 
