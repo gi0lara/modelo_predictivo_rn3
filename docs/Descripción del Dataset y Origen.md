@@ -49,6 +49,8 @@ El gráfico de densidad permite observar las diferencias en el comportamiento de
 
 Desde el punto de vista del modelo, estas diferencias resultan relevantes ya que permiten identificar patrones climáticos distintos entre ambas ciudades. La combinación de temperaturas registradas en cada localidad puede aportar información útil para detectar la probabilidad de congelamiento diferencial en los tramos intermedios de la calzada
 
+<img width="989" height="490" alt="image" src="https://github.com/user-attachments/assets/98729aa4-643f-4fae-b765-7d84e2f3802e" />
+
 
 ## Relación de Humedad Relativa entre ambas ciudades (Scatter Plot)
 
@@ -56,6 +58,7 @@ El gráfico de dispersión muestra que la mayor parte de las observaciones se co
 
 Para el modelo, esta situación es beneficiosa porque ambas variables aportan información complementaria. Analizar simultáneamente la humedad de Río Grande y Ushuaia puede ayudar a identificar distintos escenarios climáticos que podrían afectar las condiciones de circulación en la Ruta Nacional Nº 3.
 
+<img width="790" height="590" alt="image" src="https://github.com/user-attachments/assets/d40210e5-b278-4031-9c7d-d25f6a779278" />
 
 
 
