@@ -19,7 +19,7 @@ Desarrollar un modelo de Aprendizaje Automático supervisado, utilizando la libr
 
 
 
-##origen del dataset
+## Origen del dataset
 
 Los datos meteorológicos utilizados en este proyecto fueron obtenidos de la plataforma Meteostat e incluyen registros históricos de las estaciones meteorológicas de Ushuaia y Río Grande correspondientes al período enero de 2023 - abril de 2026.
 Debido a limitaciones en la descarga de grandes volúmenes de información, los datos fueron obtenidos en archivos semanales para garantizar la disponibilidad de todas las variables necesarias, especialmente la condición climática (Coco).
