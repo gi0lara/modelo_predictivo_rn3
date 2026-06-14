@@ -11,15 +11,20 @@ link Github; https://github.com/gi0lara/modelo_predictivo_rn3.git
 
 ## Introducción
 
+## Descripción del problema
+Este proyecto tiene como objetivo desarrollar un modelo de Aprendizaje Automático capaz de predecir condiciones de riesgo vial asociadas a la baja visibilidad en la Ruta Nacional N.º 3 de Tierra del Fuego. Utilizando datos meteorológicos históricos, se busca identificar situaciones que favorezcan la formación de niebla y otros fenómenos que dificultan la conducción, contribuyendo así a la generación de alertas tempranas para mejorar la seguridad vial.
 
-## Origen del dataset
+## Objetivo General
+Desarrollar un modelo de Aprendizaje Automático supervisado, utilizando la librería scikit-learn, que permita clasificar de manera temprana condiciones de riesgo vial por pérdida crítica de visibilidad en la Ruta Nacional N.º 3 a partir de variables meteorológicas locales, con el objetivo de emitir alertas tempranas sobre posibles escenarios de baja visibilidad y peligro para la circulación.
 
- Los datos meteorológicos utilizados en este proyecto fueron obtenidos de Meteostat, una plataforma de acceso abierto que brinda información climática histórica de distintas partes del mundo. Para el análisis se seleccionaron las estaciones meteorológicas oficiales de las dos principales ciudades de la provincia de Tierra del Fuego: Ushuaia (representativa de la zona sur y cordillerana) y Río Grande (representativa de la zona norte y esteparia).
 
-Durante la recopilación de los datos surgió una dificultad importante. Al descargar grandes períodos de tiempo de manera automática, algunas variables relevantes no se incluían correctamente, especialmente la columna coco (Código de Condición Climática), que resulta fundamental para el entrenamiento supervisado de los modelos utilizados en este trabajo.
 
-Para solucionar este problema, se optó por realizar las descargas en períodos más pequeños, organizados de forma semanal para cada ciudad. De esta manera se logró obtener la información completa y garantizar la presencia de todas las variables necesarias. El período analizado abarca desde enero de 2023 hasta abril de 2026.
+##origen del dataset
 
+Los datos meteorológicos utilizados en este proyecto fueron obtenidos de la plataforma Meteostat e incluyen registros históricos de las estaciones meteorológicas de Ushuaia y Río Grande correspondientes al período enero de 2023 - abril de 2026.
+Debido a limitaciones en la descarga de grandes volúmenes de información, los datos fueron obtenidos en archivos semanales para garantizar la disponibilidad de todas las variables necesarias, especialmente la condición climática (Coco).
+Posteriormente, los archivos de cada ciudad fueron integrados y consolidados en un único dataset, alineando los registros por fecha y hora. El conjunto de datos final fue almacenado en formato Excel (.xlsx) para su procesamiento y análisis en Python.
+Los archivos originales descargados se encuentran disponibles en la carpeta data/raw, mientras que el dataset consolidado y listo para su utilización se encuentra en data/processed. Ambos pueden ser consultados y descargados desde este repositorio.
 
 ●​ link dataset Rio Grande: https://meteostat.net/es/station/87934?t=2026-05-19/2026-05-26
 
@@ -27,18 +32,9 @@ Para solucionar este problema, se optó por realizar las descargas en períodos 
 ●​ link dataset Ushuaia: https://meteostat.net/es/station/87938?t=2026-05-19/2026-05-26
 
 
-## Integración y Consolidación del Dataset
+## Análisis exploratorio (conclusiones de análisis)
 
-
-Una vez descargados los archivos semanales de las estaciones meteorológicas de Ushuaia y Río Grande, se realizó el proceso de integración de los datos utilizando la herramienta de Excel. En primer lugar, se unieron todos los archivos correspondientes a cada ciudad para formar una única base de datos histórica continua. De esta manera se obtuvieron dos conjuntos de datos completos, uno para Ushuaia y otro para Río Grande, con información recopilada durante más de tres años.
-
-Luego, ambas bases fueron combinadas en una sola hoja de trabajo. Para ello, los registros se alinearon según la fecha y hora de cada medición, asegurandoque cada fila contuviera información correspondiente al mismo momento temporal en ambas ciudades. Finalmente, el archivo consolidado fue guardado en formato .xlsx para su posterior importación y procesamiento en Python.
-
-
-## Descripción del dataset
-
- El dataset final utilizado para el proyecto está compuesto por 29.184 registros y 19 variables. La información corresponde a observaciones meteorológicas de las ciudades de Río Grande y Ushuaia, organizadas en función de una variable temporal (time) almacenada en formato fecha y hora. Las restantes 18 variables son de tipo numérico (float64) e incluyen mediciones relacionadas con temperatura (temp), punto de rocío (dwpt), humedad relativa (rhum), precipitaciones (prcp), presión atmosférica (pres), dirección del viento (wdir), velocidad del viento (wspd), ráfagas máximas de viento (wpgt) y condición meteorológica (coco) para ambas ciudades. El conjunto de datos presenta algunos valores faltantes, principalmente en las variables de ráfagas máximas de viento (wpgt_Rio Grande y wpgt_Ushuaia), mientras que el resto de las variables cuenta con una cobertura superior al 97% de los registros. El tamaño total del dataset en memoria es de aproximadamente 4,2 MB.
-
+El dataset final utilizado para el proyecto está compuesto por 29.184 registros y 19 variables. La información corresponde a observaciones meteorológicas de las ciudades de Río Grande y Ushuaia, organizadas en función de una variable temporal (time) almacenada en formato fecha y hora. Las restantes 18 variables son de tipo numérico (float64) e incluyen mediciones relacionadas con temperatura (temp), punto de rocío (dwpt), humedad relativa (rhum), precipitaciones (prcp), presión atmosférica (pres), dirección del viento (wdir), velocidad del viento (wspd), ráfagas máximas de viento (wpgt) y condición meteorológica (coco) para ambas ciudades. El conjunto de datos presenta algunos valores faltantes, principalmente en las variables de ráfagas máximas de viento (wpgt_Rio Grande y wpgt_Ushuaia), mientras que el resto de las variables cuenta con una cobertura superior al 97% de los registros. El tamaño total del dataset en memoria es de aproximadamente 4,2 MB.
 
 El análisis descriptivo de las principales variables meteorológicas muestra que las temperaturas medias registradas fueron de 6,20 °C en Río Grande y 6,40 °C en Ushuaia, con valores que oscilaron entre -12,6 °C y 25 °C en Río Grande, y entre -6°C y 25 °C en Ushuaia. La humedad relativa presentó promedios elevados en ambas ciudades, alcanzando 74,31 % en Río Grande y 73,24 % en Ushuaia, lo que refleja las características climáticas predominantes de la región. Respecto a las precipitaciones, se observó una media de 0,055 mm en Río Grande y 0,119 mm en Ushuaia, aunque la mediana fue de 0 mm en ambos casos, indicando que la mayoría de los registros no presentan precipitaciones y que los eventos de lluvia se concentran en determinados períodos. Asimismo, las precipitaciones máximas alcanzaron 8,2 mm en Río Grande y 7,5 mm en Ushuaia, evidenciando la ocurrencia ocasional de eventos de mayor intensidad. En general, las distribuciones muestran una importante variabilidad térmica y niveles de humedad elevados, características propias del clima fueguino.
 
@@ -142,6 +138,24 @@ El gráfico muestra la frecuencia de eventos extremos(niebla, niebla helada, llu
 
 <img width="531" height="374" alt="image" src="https://github.com/user-attachments/assets/746e3436-3165-4f77-9fd0-69ae82002aad" />
 
+## Conclusiones del análisis 
 
-## Documentacion de meteosat: https://dev.meteostat.net/formats.html#meteorological-parameters
+El análisis exploratorio permitió identificar diferencias climáticas relevantes entre ambas ciudades. Río Grande presentó una mayor variabilidad térmica, niveles de humedad ligeramente superiores y una mayor frecuencia de eventos extremos, especialmente niebla y niebla helada. Ushuaia, en cambio, mostró un comportamiento más estable desde el punto de vista térmico y una mayor presencia de fenómenos asociados a precipitaciones y nevadas. Estas características resultan especialmente importantes para comprender cómo las condiciones meteorológicas pueden variar a lo largo de la provincia y afectar de manera diferente a la circulación vehicular.
+Las matrices de correlación evidenciaron relaciones significativas entre variables como temperatura, humedad relativa y punto de rocío, confirmando patrones atmosféricos coherentes con la climatología fueguina. Asimismo, el análisis de la diferencia entre temperatura y punto de rocío permitió detectar una mayor predisposición a la formación de niebla en Río Grande, un fenómeno directamente relacionado con la reducción de visibilidad en rutas.
+En conjunto, los resultados del análisis exploratorio permitieron comprender el comportamiento meteorológico de ambas localidades, identificar variables relevantes para el modelado predictivo y validar la calidad del dataset construido. 
+
+
+## Evaluación del modelo
+
+El modelo obtuvo una Accuracy del 79,94%, las categorías Riesgo Bajo y Riesgo Moderado presentaron un desempeño sólido, con valores de F1-Score de 0,83 y 0,81 respectivamente, reflejando una buena capacidad de clasificación. Por otro lado, la categoría Riesgo Crítico mostró un comportamiento diferente. Si bien alcanzó un recall de 0,80, lo que significa que logró identificar el 80% de los casos críticos reales, su precisión fue de 0,34, indicando que una parte importante de los casos predichos como críticos pertenecían en realidad a otras categorías. Como resultado, el F1-Score para esta clase fue de 0,48, considerablemente menor al de las demás categorías. Este comportamiento puede estar relacionado con el desbalance presente en el conjunto de datos, ya que la clase Riesgo Crítico cuenta con solo 230 observaciones, frente a las 3358 de Riesgo Bajo y las 2249 de Riesgo Moderado. En términos generales, el modelo presenta un rendimiento satisfactorio, especialmente en las categorías de Riesgo Bajo y Moderado, manteniendo además una buena capacidad para detectar los casos críticos. 
+<img width="460" height="244" alt="image" src="https://github.com/user-attachments/assets/513e3eb5-78df-4347-ad0d-9edfbcaf6025" />
+
+
+
+
+La matriz de confusión obtenida deja en evidencia un desempeño satisfactorio en la tarea de clasificación, ya que la mayor parte de las predicciones se concentra sobre la diagonal principal, lo que representa clasificaciones correctas. Para la categoría Bajo, el modelo clasificó correctamente 2696 observaciones, aunque registró algunas confusiones con las categorías Moderado (343 casos) y Crítico (319 casos). En la categoría Moderado, se identificaron correctamente 1785 registros, mientras que 427 fueron clasificados como Bajo y 37 como Crítico. Respecto a la categoría Crítico, que presenta una menor cantidad de observaciones dentro del conjunto de datos, el modelo logró clasificar correctamente 185 casos, con errores reducidos hacia las categorías Bajo (36 casos) y Moderado (9 casos).
+Considerando las métricas obtenidas, el modelo Random Forest alcanzó una precisión cercana al 80 %, lo que refleja un desempeño adecuado para el problema planteado. La elevada cantidad de aciertos observada en la matriz de confusión confirma su capacidad para identificar correctamente los distintos niveles de riesgo analizados. Asimismo, el buen comportamiento alcanzado en la categoría Crítico, pese a contar con una menor representación en los datos, demuestra la robustez del modelo frente al desbalance de clases. En consecuencia, Random Forest se presenta como una alternativa eficaz y confiable para la clasificación de los niveles de visibilidad y seguridad vial en la Ruta Nacional N.º 3.
+
+<img width="661" height="490" alt="image" src="https://github.com/user-attachments/assets/66181575-f292-4eaf-8910-fb8d084a3cfa" />
+
 
