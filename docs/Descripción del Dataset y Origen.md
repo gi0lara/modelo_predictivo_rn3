@@ -42,6 +42,35 @@ Luego, ambas bases fueron combinadas en una sola hoja de trabajo. Para ello, los
 
 El análisis descriptivo de las principales variables meteorológicas muestra que las temperaturas medias registradas fueron de 6,20 °C en Río Grande y 6,40 °C en Ushuaia, con valores que oscilaron entre -12,6 °C y 25 °C en Río Grande, y entre -6°C y 25 °C en Ushuaia. La humedad relativa presentó promedios elevados en ambas ciudades, alcanzando 74,31 % en Río Grande y 73,24 % en Ushuaia, lo que refleja las características climáticas predominantes de la región. Respecto a las precipitaciones, se observó una media de 0,055 mm en Río Grande y 0,119 mm en Ushuaia, aunque la mediana fue de 0 mm en ambos casos, indicando que la mayoría de los registros no presentan precipitaciones y que los eventos de lluvia se concentran en determinados períodos. Asimismo, las precipitaciones máximas alcanzaron 8,2 mm en Río Grande y 7,5 mm en Ushuaia, evidenciando la ocurrencia ocasional de eventos de mayor intensidad. En general, las distribuciones muestran una importante variabilidad térmica y niveles de humedad elevados, características propias del clima fueguino.
 
+## Matriz de correlacion de las variables meteorologicas de ambas ciudades
+
+<img width="1023" height="943" alt="image" src="https://github.com/user-attachments/assets/42ea05f2-9e05-40d0-a532-6af15e55fe73" />
+
+
+## Matriz de correlaciones de la ciudad de rio grande
+
+<img width="634" height="542" alt="image" src="https://github.com/user-attachments/assets/e78a8efb-6deb-4e07-b299-c9309e3db5ea" />
+
+
+## Matriz de correlaciones de la ciudad de Ushuaia
+
+<img width="612" height="521" alt="image" src="https://github.com/user-attachments/assets/498a9b4c-6b8c-4a00-af9b-21e91c50011a" />
+
+## Distribución de coco por ciudad
+
+<img width="1390" height="490" alt="image" src="https://github.com/user-attachments/assets/a56c5bbe-4a8d-495f-956c-26076136ebc7" />
+
+
+## Humedad relativa: Río Grande vs Ushuaia
+<img width="676" height="451" alt="image" src="https://github.com/user-attachments/assets/b173305a-65b9-41a6-bb7c-48d1d012b40d" />
+
+
+## Diferencia entre Temperatura y Dew Point
+<img width="667" height="451" alt="image" src="https://github.com/user-attachments/assets/f3abc33c-cedd-4046-b3d0-3c1bbe9d4afb" />
+
+## Punto de rocio: Rio Grande vs Ushuaia
+<img width="678" height="451" alt="image" src="https://github.com/user-attachments/assets/8ef654f0-e6e3-4a40-b265-bcb9f53b5bfe" />
+
 
 ## Distribución de Temperaturas (Ushuaia vs Río Grande)
 
@@ -72,6 +101,12 @@ Estos valores no fueron considerados errores ni eliminados durante el proceso de
 
 <img width="1189" height="495" alt="image" src="https://github.com/user-attachments/assets/04b85168-87ba-485f-811a-d7bafd048f6a" />
 
+
+
+## Frecuencia de eventos extremos
+
+El gráfico muestra la frecuencia de eventos extremos(niebla, niebla helada, lluvia intensa, nevadas y nevadas intensas, chubascos intensos de lluvia y nieve, chubascos de nieve, tormentas eléctricas y temporales severos, correspondientes a los códigos meteorológicos 5, 6, 9, 15, 16, 18, 21, 22, 25 y 27.) registrada en las dos localidades analizadas. Se observa que Río Grande presenta una proporción ligeramente mayor de eventos extremos, alcanzando un 5,51 % del total de observaciones, mientras que Ushuaia registra apenas un 1,08 %. Esto indica que los eventos extremos son aproximadamente cinco veces más frecuentes en Río Grande que en Ushuaia, evidenciando una mayor variabilidad o exposición a condiciones extremas en la primera localidad durante el período estudiado.
+<img width="531" height="374" alt="image" src="https://github.com/user-attachments/assets/746e3436-3165-4f77-9fd0-69ae82002aad" />
 
 
 ## Documentacion de meteosat: https://dev.meteostat.net/formats.html#meteorological-parameters
