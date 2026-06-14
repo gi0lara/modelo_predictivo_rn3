@@ -144,6 +144,47 @@ El análisis exploratorio permitió identificar diferencias climáticas relevant
 Las matrices de correlación evidenciaron relaciones significativas entre variables como temperatura, humedad relativa y punto de rocío, confirmando patrones atmosféricos coherentes con la climatología fueguina. Asimismo, el análisis de la diferencia entre temperatura y punto de rocío permitió detectar una mayor predisposición a la formación de niebla en Río Grande, un fenómeno directamente relacionado con la reducción de visibilidad en rutas.
 En conjunto, los resultados del análisis exploratorio permitieron comprender el comportamiento meteorológico de ambas localidades, identificar variables relevantes para el modelado predictivo y validar la calidad del dataset construido. 
 
+## Modelo de aprendizaje automático
+
+Descripción del Modelo de Aprendizaje Automático
+Para el desarrollo del modelo predictivo de visibilidad y seguridad vial en la Ruta Nacional N.º 3 se utilizó un algoritmo de aprendizaje supervisado basado en Random Forest, una técnica de ensamble que combina múltiples árboles de decisión para mejorar la capacidad predictiva y reducir el riesgo de sobreajuste. Este modelo fue seleccionado debido a su buen desempeño en problemas de clasificación, su capacidad para manejar relaciones no lineales entre variables y su robustez frente a datos con valores atípicos o distribuciones complejas, características frecuentes en los fenómenos meteorológicos.
+La construcción del modelo comenzó con la generación de una variable objetivo denominada target_visibilidad, diseñada para representar distintos niveles de riesgo vial asociados a las condiciones climáticas. Esta variable fue creada a partir de los códigos meteorológicos (coco) registrados en las ciudades de Río Grande y Ushuaia. Se definieron tres categorías de clasificación:
+Clase 0 → Riesgo Bajo
+Corresponde a situaciones meteorológicas con buena visibilidad y sin fenómenos que representen un riesgo para la circulación.
+Códigos coco: [1, 2, 3, 4]
+1: Despejado (Clear)
+2: Parcialmente nublado o buen tiempo (Fair)
+3: Nublado (Cloudy)
+4: Cubierto (Overcast)
+Clase 1 → Riesgo Moderado
+Incluye fenómenos meteorológicos que reducen la visibilidad, pero que generalmente no representan condiciones extremas para la seguridad vial.
+Códigos coco: [7, 8, 9, 14, 15, 17, 18]
+7: Lluvia ligera (Light Rain)
+8: Lluvia (Rain)
+9: Lluvia intensa (Heavy Rain)
+14: Nevada ligera (Light Snowfall)
+15: Nevada (Snowfall)
+17: Chubasco de lluvia (Rain Shower)
+18: Chubasco intenso de lluvia (Heavy Rain Shower)
+
+Clase 2 ( Riesgo Crítico)comprende fenómenos meteorológicos severos que pueden afectar gravemente la visibilidad y la seguridad vial, requiriendo una alerta temprana.
+Códigos coco: [5, 6, 16, 22, 23, 24, 25, 26, 27]
+5: Niebla (Fog)
+6: Niebla helada (Freezing Fog)
+16: Nevada intensa (Heavy Snowfall)
+22: Chubasco intenso de nieve (Heavy Snow Shower)
+23: Descargas eléctricas (Lightning)
+24: Granizo (Hail)
+25: Tormenta eléctrica (Thunderstorm)
+26: Tormenta eléctrica intensa (Heavy Thunderstorm)
+27: Tormenta (Storm)
+
+
+Como variables predictoras se seleccionaron doce indicadores meteorológicos correspondientes a temperatura, punto de rocío, humedad relativa, precipitaciones, velocidad del viento y presión atmosférica registradas tanto en Río Grande como en Ushuaia. Estas variables fueron elegidas debido a su influencia directa sobre la formación de fenómenos que afectan la visibilidad y las condiciones de seguridad vial. Antes del entrenamiento, los valores faltantes fueron reemplazados utilizando la mediana de cada variable, permitiendo mantener la totalidad de las observaciones sin introducir sesgos significativos.
+Para entrenar y evaluar el modelo, el conjunto de datos se dividió en dos subconjuntos mediante la función train_test_split de Scikit-Learn. El 80 % de las observaciones se destinó al entrenamiento y el 20 % restante a la evaluación. Además, se aplicó una partición estratificada (stratify = y) para conservar la proporción original de cada clase en ambos conjuntos, aspecto especialmente importante debido al desbalance existente entre las categorías de riesgo.
+La arquitectura del modelo se basó en un bosque de 200 árboles de decisión (n_estimators = 200), permitiendo que cada árbol aprendiera diferentes patrones presentes en los datos y que la predicción final surgiera de la combinación de todas sus decisiones. Para evitar árboles excesivamente complejos y mejorar la capacidad de generalización, se estableció una profundidad máxima de 10 niveles (max_depth = 10). Asimismo, se utilizó el parámetro class_weight = 'balanced', que ajusta automáticamente el peso de cada clase en función de su frecuencia dentro del conjunto de entrenamiento. Esta configuración resulta especialmente útil porque la categoría Riesgo Crítico posee una cantidad considerablemente menor de observaciones respecto de las demás clases.
+Finalmente, se fijó un random_state = 42 para garantizar la reproducibilidad de los resultados. Una vez entrenado, el modelo fue evaluado mediante métricas de clasificación como Accuracy, Precision, Recall y F1-Score, complementadas por un Classification Report y una matriz de confusión, herramientas que permitieron analizar en detalle el desempeño del modelo para cada categoría de riesgo. Los resultados obtenidos mostraron un desempeño satisfactorio, alcanzando una precisión  cercana al 80 % y una capacidad destacable para identificar situaciones de riesgo crítico, lo que demuestra el potencial del modelo como herramienta de apoyo para la predicción de condiciones meteorológicas adversas y la mejora de la seguridad vial en la Ruta Nacional N.º 3.
+
 
 ## Evaluación del modelo
 
