@@ -210,3 +210,9 @@ El análisis exploratorio permitió confirmar diferencias meteorológicas signif
 No obstante, el proyecto presenta algunas limitaciones. La principal está relacionada con el desbalance de clases existente en el conjunto de datos, ya que los eventos clasificados como Riesgo Crítico(Clase 2) poseen una representación considerablemente menor respecto de las demás categorías. Asimismo, el modelo se basa únicamente en información meteorológica proveniente de dos estaciones ubicadas en los extremos de la provincia, lo que limita la representación de las condiciones presentes en los sectores intermedios de la Ruta Nacional N.º 3.
 Como línea de mejora futura,propongo poder ampliar el dataset incorporando datos meteorológicos correspondientes a la ciudad de Tolhuin, lo que permitiría incluir información representativa de la zona central de la provincia y mejorar la caracterización de las condiciones climáticas a lo largo de todo el corredor vial. También sería conveniente incorporar nuevas variables, como datos de visibilidad observada, estado de la calzada, tránsito vehicular o información satelital, que puedan ampliar el proyecto a no solo la visibilidad, sino también a la seguridad vial en general del estado de la ruta.
 
+
+## Video explicativo
+
+link al video expositivo del proyecto de Aprendizaje Automatico:  Modelo Predictivo de Visibilidad y Seguridad Vial en la RN3
+
+[https://drive.google.com/file/d/1ELO-cNZWddyH089FkBOnyDm9IvpkHCJR/view?usp=sharing](https://drive.google.com/file/d/1ELO-cNZWddyH089FkBOnyDm9IvpkHCJR/view?usp=sharing)https://drive.google.com/file/d/1ELO-cNZWddyH089FkBOnyDm9IvpkHCJR/view?usp=sharing
