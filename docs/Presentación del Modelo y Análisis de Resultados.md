@@ -150,7 +150,7 @@ Descripción del Modelo de Aprendizaje Automático
 Para el desarrollo del modelo predictivo de visibilidad y seguridad vial en la Ruta Nacional N.º 3 se utilizó un algoritmo de aprendizaje supervisado basado en Random Forest, una técnica de ensamble que combina múltiples árboles de decisión para mejorar la capacidad predictiva y reducir el riesgo de sobreajuste. Este modelo fue seleccionado debido a su buen desempeño en problemas de clasificación, su capacidad para manejar relaciones no lineales entre variables y su robustez frente a datos con valores atípicos o distribuciones complejas, características frecuentes en los fenómenos meteorológicos.
 La construcción del modelo comenzó con la generación de una variable objetivo denominada target_visibilidad, diseñada para representar distintos niveles de riesgo vial asociados a las condiciones climáticas. Esta variable fue creada a partir de los códigos meteorológicos (coco) registrados en las ciudades de Río Grande y Ushuaia. Se definieron tres categorías de clasificación:
 
-Clase 0( Riesgo Bajo)
+Clase 1( Riesgo Bajo)
 Corresponde a situaciones meteorológicas con buena visibilidad y sin fenómenos que representen un riesgo para la circulación.
 Códigos coco: [1, 2, 3, 4]
 1: Despejado (Clear)
@@ -158,7 +158,7 @@ Códigos coco: [1, 2, 3, 4]
 3: Nublado (Cloudy)
 4: Cubierto (Overcast)
 
-Clase 1(Riesgo Moderado)
+Clase 2(Riesgo Moderado)
 Incluye fenómenos meteorológicos que reducen la visibilidad, pero que generalmente no representan condiciones extremas para la seguridad vial.
 Códigos coco: [7, 8, 9, 14, 15, 17, 18]
 7: Lluvia ligera (Light Rain)
@@ -169,7 +169,7 @@ Códigos coco: [7, 8, 9, 14, 15, 17, 18]
 17: Chubasco de lluvia (Rain Shower)
 18: Chubasco intenso de lluvia (Heavy Rain Shower)
 
-Clase 2 ( Riesgo Crítico)comprende fenómenos meteorológicos severos que pueden afectar gravemente la visibilidad y la seguridad vial, requiriendo una alerta temprana.
+Clase 3 ( Riesgo Crítico)comprende fenómenos meteorológicos severos que pueden afectar gravemente la visibilidad y la seguridad vial, requiriendo una alerta temprana.
 Códigos coco: [5, 6, 16, 22, 23, 24, 25, 26, 27]
 5: Niebla (Fog)
 6: Niebla helada (Freezing Fog)
