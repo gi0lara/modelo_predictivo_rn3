@@ -19,7 +19,28 @@ Posteriormente, los archivos de cada ciudad fueron integrados y consolidados en 
 
 Los archivos originales descargados se encuentran disponibles en la carpeta **data/raw**, mientras que el dataset consolidado y listo para su utilización se encuentra en **data/processed**. Ambos pueden ser consultados y descargados desde este repositorio.
 
+##  Tecnologías Utilizadas
+- [x] Python
+- [x] Pandas
+- [x] NumPy
+- [x] Matplotlib
+- [x] Seaborn
+- [x] Scikit-Learn
+- [x] Meteostat
+## 📈 Resultados
 
+
+
+<img width="460" height="244" alt="image" src="https://github.com/user-attachments/assets/4561f5d1-9a4a-4f35-9e5d-41c11461953f" />
+
+<img width="661" height="490" alt="image" src="https://github.com/user-attachments/assets/f51d9a7c-a09b-4511-aeae-53b83a9d872f" />
+
+### Hallazgos destacados
+
+- Excelente desempeño en Riesgo Bajo y Moderado.
+- Buena capacidad de detección de eventos críticos.
+- El modelo identifica correctamente el 80 % de los casos de Riesgo Crítico.
+- El desbalance de clases afecta principalmente la precisión de la categoría crítica.
 
 Project Organization
 ------------
@@ -72,4 +93,16 @@ Project Organization
 
 --------
 
+## Mejoras Futuras
+
+- Incorporar datos meteorológicos de Tolhuin.
+- Incluir variables de visibilidad observada.
+- Incorporar información del estado de la calzada.
+- Integrar datos de tránsito vehicular.
+- Implementar un sistema de alertas en tiempo real.
+## Licencia
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
+
+
+Este proyecto fue desarrollado con fines académicos y educativos.
