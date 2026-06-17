@@ -98,7 +98,7 @@ Project Organization
     ├── data
     │   ├── interim        <- data set de la ciudades individuales
     │   ├── processed      <- dataset final 
-    │   └── raw            <- datasets originales (semanales)
+    │   └── raw            <- datasets originales (semanales, archivos zip)
     │
     ├── docs               <-documentacion referida al proyecto 
     │
