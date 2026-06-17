@@ -47,11 +47,11 @@ El problema planteado corresponde a un problema de clasificación, ya que el obj
  El modelo trabajará con tres clases previamente definidas asociadas a diferentes niveles de riesgo por pérdida de visibilidad y transitabilidad. El algoritmo será entrenado utilizando datos meteorológicos históricos etiquetados, permitiendo reconocer patrones climáticos capaces de anticipar escenarios específicos para la circulación. Para ello, la variable objetivo (target) se construirá utilizando el Código de Condición Climática (coco) proporcionado por el dataset, agrupando las observaciones en tres categorías principales:
 
 
-●​ Clase 0 (Riesgo Bajo / Visibilidad Óptima): representa escenarios meteorológicos donde la visibilidad es adecuada y superior a 10 km, no existiendo un riesgo para la seguridad vial. Incluye condiciones de cielo despejado, buen tiempo o nubosidad estándar en general (códigos de coco bajos como 1, 2 o 3).
+●​ Clase 1 (Riesgo Bajo / Visibilidad Óptima): representa escenarios meteorológicos donde la visibilidad es adecuada y superior a 10 km, no existiendo un riesgo para la seguridad vial. Incluye condiciones de cielo despejado, buen tiempo o nubosidad estándar en general (códigos de coco bajos como 1, 2 o 3).
 
-●​ Clase 1 (Riesgo Moderado / Visibilidad Reducida): registra situaciones intermedias donde la visibilidad se encuentra parcialmente comprometida (entre 1 km y 10 km) debido a fenómenos de menor intensidad como lluvias moderadas o neblinas ligeras.
+●​ Clase 2 (Riesgo Moderado / Visibilidad Reducida): registra situaciones intermedias donde la visibilidad se encuentra parcialmente comprometida (entre 1 km y 10 km) debido a fenómenos de menor intensidad como lluvias moderadas o neblinas ligeras.
 
-●​ Clase 2 (Riesgo Crítico / Peligro Extremo): incluye escenarios severos donde la visibilidad se encuentra críticamente comprometida, generalmente por debajo de los 500 metros. Esta categoría contempla eventos extremos característicos de la isla como niebla densa (Código 7), niebla de hielo (Código 8) o episodios de nevadas intensas combinadas con fuertes ráfagas de viento (viento blanco).
+●​ Clase 3 (Riesgo Crítico / Peligro Extremo): incluye escenarios severos donde la visibilidad se encuentra críticamente comprometida, generalmente por debajo de los 500 metros. Esta categoría contempla eventos extremos característicos de la isla como niebla densa (Código 7), niebla de hielo (Código 8) o episodios de nevadas intensas combinadas con fuertes ráfagas de viento (viento blanco).
 
 
 
