@@ -19,6 +19,21 @@ Posteriormente, los archivos de cada ciudad fueron integrados y consolidados en 
 
 Los archivos originales descargados se encuentran disponibles en la carpeta **data/raw**, mientras que el dataset consolidado y listo para su utilización se encuentra en **data/processed**. Ambos pueden ser consultados y descargados desde este repositorio.
 
+●​ link dataset Rio Grande: https://meteostat.net/es/station/87934?t=2026-05-19/2026-05-26
+●​ link dataset Ushuaia: https://meteostat.net/es/station/87938?t=2026-05-19/2026-05-26
+
+### Variables utilizadas
+
+- Temperatura
+- Punto de rocío
+- Humedad relativa
+- Precipitaciones
+- Presión atmosférica
+- Dirección del viento
+- Velocidad del viento
+- Ráfagas máximas
+- Condición meteorológica (COCO)
+
 ##  Tecnologías Utilizadas
 - [x] Python
 - [x] Pandas
@@ -27,6 +42,31 @@ Los archivos originales descargados se encuentran disponibles en la carpeta **da
 - [x] Seaborn
 - [x] Scikit-Learn
 - [x] Meteostat
+
+##  Modelo de Machine Learning
+
+### Algoritmo seleccionado
+
+Se utilizó un modelo de **Random Forest Classifier** debido a:
+
+- Su capacidad para modelar relaciones no lineales.
+- Su robustez frente a ruido y valores atípicos.
+- Su buen desempeño en problemas de clasificación multiclase.
+
+### Variable objetivo
+
+Se construyó una variable denominada:
+
+**target_visibilidad**
+
+Con tres niveles de riesgo:
+
+| Clase | Nivel de Riesgo |
+|---------|----------------|
+| 1 | Riesgo Bajo |
+| 2 | Riesgo Moderado |
+| 3 | Riesgo Crítico |
+
 ## 📈 Resultados
 
 
