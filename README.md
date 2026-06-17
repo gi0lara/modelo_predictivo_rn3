@@ -1,5 +1,6 @@
 # Modelo Predictivo Ruta Nacional N°3
-### Autor: LARA, Giovanna Estefania
+### Autor: LARA, Giovanna Estefania - Estudiante de Ciencia de Datos e IA
+Politécnico Malvinas Argentinas, Tierra del Fuego, Argentina 🇦🇷
 
 ## Descripción del Proyecto
 
