@@ -87,7 +87,7 @@ Con tres niveles de riesgo:
 # Video 
 En este video se explica el desarrollo completo del proyecto, desde la obtención y análisis de los datos meteorológicos hasta la construcción y evaluación del modelo Random Forest utilizado para predecir niveles de riesgo vial en la Ruta Nacional N.º 3.
 
-[https://drive.google.com/file/d/1ELO-cNZWddyH089FkBOnyDm9IvpkHCJR/view?usp=sharing](https://drive.google.com/file/d/1ELO-cNZWddyH089FkBOnyDm9IvpkHCJR/view?usp=sharing)https://drive.google.com/file/d/1ELO-cNZWddyH089FkBOnyDm9IvpkHCJR/view?usp=sharing
+https://drive.google.com/file/d/1ELO-cNZWddyH089FkBOnyDm9IvpkHCJR/view?usp=sharing
 
 Project Organization
 ------------
