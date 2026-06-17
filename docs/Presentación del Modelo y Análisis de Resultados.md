@@ -32,7 +32,7 @@ Los archivos originales descargados se encuentran disponibles en la carpeta data
 ●​ link dataset Ushuaia: https://meteostat.net/es/station/87938?t=2026-05-19/2026-05-26
 
 
-## Análisis exploratorio (conclusiones de análisis)
+## Análisis exploratorio 
 
 El dataset final utilizado para el proyecto está compuesto por 29.184 registros y 19 variables. La información corresponde a observaciones meteorológicas de las ciudades de Río Grande y Ushuaia, organizadas en función de una variable temporal (time) almacenada en formato fecha y hora. Las restantes 18 variables son de tipo numérico (float64) e incluyen mediciones relacionadas con temperatura (temp), punto de rocío (dwpt), humedad relativa (rhum), precipitaciones (prcp), presión atmosférica (pres), dirección del viento (wdir), velocidad del viento (wspd), ráfagas máximas de viento (wpgt) y condición meteorológica (coco) para ambas ciudades. El conjunto de datos presenta algunos valores faltantes, principalmente en las variables de ráfagas máximas de viento (wpgt_Rio Grande y wpgt_Ushuaia), mientras que el resto de las variables cuenta con una cobertura superior al 97% de los registros. El tamaño total del dataset en memoria es de aproximadamente 4,2 MB.
 
