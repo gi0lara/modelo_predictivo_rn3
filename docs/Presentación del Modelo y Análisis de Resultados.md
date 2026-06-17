@@ -152,34 +152,37 @@ La construcción del modelo comenzó con la generación de una variable objetivo
 
 Clase 1( Riesgo Bajo)
 Corresponde a situaciones meteorológicas con buena visibilidad y sin fenómenos que representen un riesgo para la circulación.
+
 Códigos coco: [1, 2, 3, 4]
-1: Despejado (Clear)
-2: Parcialmente nublado o buen tiempo (Fair)
-3: Nublado (Cloudy)
-4: Cubierto (Overcast)
+- 1: Despejado (Clear)
+- 2: Parcialmente nublado o buen tiempo (Fair)
+- 3: Nublado (Cloudy)
+- 4: Cubierto (Overcast)
 
 Clase 2(Riesgo Moderado)
 Incluye fenómenos meteorológicos que reducen la visibilidad, pero que generalmente no representan condiciones extremas para la seguridad vial.
+
 Códigos coco: [7, 8, 9, 14, 15, 17, 18]
-7: Lluvia ligera (Light Rain)
-8: Lluvia (Rain)
-9: Lluvia intensa (Heavy Rain)
-14: Nevada ligera (Light Snowfall)
-15: Nevada (Snowfall)
-17: Chubasco de lluvia (Rain Shower)
-18: Chubasco intenso de lluvia (Heavy Rain Shower)
+- 7: Lluvia ligera (Light Rain)
+- 8: Lluvia (Rain)
+- 9: Lluvia intensa (Heavy Rain)
+- 14: Nevada ligera (Light Snowfall)
+- 15: Nevada (Snowfall)
+- 17: Chubasco de lluvia (Rain Shower)
+- 18: Chubasco intenso de lluvia (Heavy Rain Shower)
 
 Clase 3 ( Riesgo Crítico)comprende fenómenos meteorológicos severos que pueden afectar gravemente la visibilidad y la seguridad vial, requiriendo una alerta temprana.
+
 Códigos coco: [5, 6, 16, 22, 23, 24, 25, 26, 27]
-5: Niebla (Fog)
-6: Niebla helada (Freezing Fog)
-16: Nevada intensa (Heavy Snowfall)
-22: Chubasco intenso de nieve (Heavy Snow Shower)
-23: Descargas eléctricas (Lightning)
-24: Granizo (Hail)
-25: Tormenta eléctrica (Thunderstorm)
-26: Tormenta eléctrica intensa (Heavy Thunderstorm)
-27: Tormenta (Storm)
+- 5: Niebla (Fog)
+- 6: Niebla helada (Freezing Fog)
+- 16: Nevada intensa (Heavy Snowfall)
+- 22: Chubasco intenso de nieve (Heavy Snow Shower)
+- 23: Descargas eléctricas (Lightning)
+- 24: Granizo (Hail)
+- 25: Tormenta eléctrica (Thunderstorm)
+- 26: Tormenta eléctrica intensa (Heavy Thunderstorm)
+- 27: Tormenta (Storm)
 
 
 Como variables predictoras se seleccionaron doce indicadores meteorológicos correspondientes a temperatura, punto de rocío, humedad relativa, precipitaciones, velocidad del viento y presión atmosférica registradas tanto en Río Grande como en Ushuaia. Estas variables fueron elegidas debido a su influencia directa sobre la formación de fenómenos que afectan la visibilidad y las condiciones de seguridad vial. Antes del entrenamiento, los valores faltantes fueron reemplazados utilizando la mediana de cada variable, permitiendo mantener la totalidad de las observaciones sin introducir sesgos significativos.
