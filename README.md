@@ -1,5 +1,5 @@
-# Modelo Predictivo RN3
-
+# Modelo Predictivo Ruta Nacional N°3
+### Autor: LARA, Giovanna Estefania
 
 ## Descripción del Proyecto
 
