@@ -20,9 +20,9 @@ Posteriormente, los archivos de cada ciudad fueron integrados y consolidados en 
 
 Los archivos originales descargados se encuentran disponibles en la carpeta **data/raw**, mientras que el dataset consolidado y listo para su utilización se encuentra en **data/processed**. Ambos pueden ser consultados y descargados desde este repositorio.
 
-●​ link dataset Rio Grande: https://meteostat.net/es/station/87934?t=2026-05-19/2026-05-26
+●​ link dataset Rio Grande: https://meteostat.net/es/station/87934?t=
 
-●​ link dataset Ushuaia: https://meteostat.net/es/station/87938?t=2026-05-19/2026-05-26
+●​ link dataset Ushuaia: https://meteostat.net/es/station/87938?t=
 
 ### Variables utilizadas
 
